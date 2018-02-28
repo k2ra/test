@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Nuevo Cliente</ion-title>
     <button ion-button menuToggle>
     	<ion-icon name="menu"></ion-icon>
@@ -14,7 +14,7 @@
 
     <ion-buttons end>
       <button ion-button icon-only color="royal">
-        <ion-icon name="person-add"></ion-icon>
+        <ion-icon name="more"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -24,9 +24,26 @@
 
 <ion-content padding>
 	<form >
-		<ion-item>
-			<ion-label stacked>Nombre:</ion-label>
-		</ion-item>
-		
+    <ion-list>
+  		<ion-item>
+  			<ion-label stacked>Nombre:</ion-label>
+        <ion-input type="text" placeholder ="Nombre Completo"></ion-input>
+  		</ion-item>
+      <ion-item>
+        <ion-label stacked>Telefono:</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Correo:</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Direccion:</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <div padding>
+      <button ion-button >Guardar</button>
+  		</div>
+    </ion-list>
 	</form>
 </ion-content>
