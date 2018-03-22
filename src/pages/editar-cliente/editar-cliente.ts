@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EditarClientePage } from '../editar-cliente/editar-cliente'
+
 /**
- * Generated class for the ClientesPage page.
+ * Generated class for the EditarClientePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,20 +10,16 @@ import { EditarClientePage } from '../editar-cliente/editar-cliente'
 
 @IonicPage()
 @Component({
-  selector: 'page-clientes',
-  templateUrl: 'clientes.html',
+  selector: 'page-editar-cliente',
+  templateUrl: 'editar-cliente.html',
 })
-export class ClientesPage {
+export class EditarClientePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  goToEditarCliente(){
-  	this.navCtrl.push(EditarClientePage);
-  }
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ClientesPage');
+    console.log('ionViewDidLoad EditarClientePage');
   }
 
 }

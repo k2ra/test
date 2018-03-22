@@ -13,8 +13,8 @@
     </button>
 
     <ion-buttons end>
-      <button ion-button icon-only color="royal">
-        <ion-icon name="more"></ion-icon>
+      <button ion-button icon-only color="royal" (click)="goToEditarCliente()">
+        <ion-icon name="search"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -42,7 +42,7 @@
         <ion-input type="text"></ion-input>
       </ion-item>
       <div padding>
-      <button ion-button >Guardar</button>
+      <button ion-button type="submit" block full >Guardar</button>
   		</div>
     </ion-list>
 	</form>

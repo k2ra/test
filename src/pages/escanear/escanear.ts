@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 /**
  * Generated class for the EscanearPage page.
  *
@@ -14,14 +14,31 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
   templateUrl: 'escanear.html',
 })
 export class EscanearPage {
+  options : BarcodeScannerOptions;
+  encodText : string ='';
+  scannerData:any=[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private barcodeScanner: BarcodeScanner) {
 
-  	this.barcodeScanner.scan().then((barcodeData)=>{
-  		console.log('success');
-  	}, (err)=>{
-  		console.log('error');
-  	});
+  	
+  }
+  scan(){
+    this.options={
+      prompt:'Escaneando Codigo de Barras'
+    }
+    this.barcodeScanner.scan(this.options).then((data)=>{
+        this.scannerData = data;
+      }, (err)=>{
+        console.log('error');
+      });
+  }
+
+  encode(){
+    this.barcodeScanner.encode(this.barcodeScanner.Encode.TEXT_TYPE, this.encodText).then((data)=>{
+      this.scannerData = data;
+    }, (err)=>{})
+
+
   }
 
   ionViewDidLoad() {

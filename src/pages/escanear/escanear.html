@@ -17,5 +17,18 @@
 
 
 <ion-content padding>
+	<div>
+		<ion-input style="background-color: gray" type='text' [(ngModel)]="encodText"></ion-input>
+		<button ion-button block (click)=encode()>Encode</button>
+	</div>
+	<div>
+		<button ion-button block (click)=scan()>Scan</button>
 
+		<div *ngIf="scannerData.text">
+			<label>codigo: </label>
+			<br>
+			<span>{{scannerData.text}}</span>
+		</div>
+		
+	</div>
 </ion-content>

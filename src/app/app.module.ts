@@ -3,8 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { Camera } from '@ionic-native/camera'
-import { BarcodeScanner } from '@ionic-native/barcode-scanner'
+import { Camera } from '@ionic-native/camera';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { MyApp } from './app.component';
 
@@ -13,6 +13,8 @@ import { CobrosPage } from '../pages/cobros/cobros';
 import { ProductosPage } from '../pages/productos/productos';
 import { ClientesPage } from '../pages/clientes/clientes';
 import { EscanearPage } from '../pages/escanear/escanear';
+import { EditarClientePage } from '../pages/editar-cliente/editar-cliente'
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { EscanearPage } from '../pages/escanear/escanear';
     CobrosPage,
     ProductosPage,
     ClientesPage,
-    EscanearPage
+    EscanearPage,
+    EditarClientePage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { EscanearPage } from '../pages/escanear/escanear';
     CobrosPage,
     ProductosPage,
     ClientesPage,
-    EscanearPage
+    EscanearPage,
+    EditarClientePage
   ],
   providers: [
     BarcodeScanner,
